@@ -15,26 +15,25 @@ import jakarta.persistence.Table;
 public class Person implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "fist_name", nullable = false, length = 80)
+
+	@Column(name = "first_name", nullable = false, length = 80)
 	private String firstName;
-	
+
 	@Column(name = "last_name", nullable = false, length = 80)
-	private String LastName;
-	
-	@Column(nullable = false, length = 80)
+	private String lastName;
+
+	@Column(nullable = false, length = 100)
 	private String address;
-	
+
 	@Column(nullable = false, length = 6)
 	private String gender;
-	
+
 	public Person() {
 	}
-	
 
 	public Long getId() {
 		return id;
@@ -53,11 +52,11 @@ public class Person implements Serializable {
 	}
 
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 
 	public String getAddress() {
@@ -78,7 +77,7 @@ public class Person implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(LastName, address, firstName, gender, id);
+		return Objects.hash(lastName, address, firstName, gender, id);
 	}
 
 	@Override
@@ -90,14 +89,9 @@ public class Person implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return Objects.equals(LastName, other.LastName) && Objects.equals(address, other.address)
+		return Objects.equals(lastName, other.lastName) && Objects.equals(address, other.address)
 				&& Objects.equals(firstName, other.firstName) && Objects.equals(gender, other.gender)
 				&& Objects.equals(id, other.id);
 	}
-
-	
-	
-	
-	
 
 }
