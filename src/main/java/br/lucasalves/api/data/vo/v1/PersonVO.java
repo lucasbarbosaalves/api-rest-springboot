@@ -3,11 +3,10 @@ package br.lucasalves.api.data.vo.v1;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonPropertyOrder({"id", "address", "first_name", "last_name", "gender"})
+@JsonPropertyOrder({"id", "first_name", "last_name", "address", "gender"})
 public class PersonVO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -20,8 +19,6 @@ public class PersonVO implements Serializable {
 	@JsonProperty("last_name")
 	private String lastName;
 	private String address;
-	
-	@JsonIgnore
 	private String gender;
 	
 	public PersonVO() {}
