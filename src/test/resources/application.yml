@@ -1,5 +1,7 @@
 server:
   port: 8888
+cors:
+  originPatterns: http://localhost:3000,http://localhost:8080
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,7 +12,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: false
-springdoc:
+spring-doc:
   pathsToMatch: /api/**/v1/**
   swagger-ui:
     use-root-path: true

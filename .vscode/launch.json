@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Startup<rest-api-springboot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.lucasalves.api.Startup",
+            "projectName": "rest-api-springboot",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
